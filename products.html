@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products • Emmytech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="products">
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">Emmytech</a>
+      <nav class="nav__links">
+        <a href="index.html">Home</a>
+        <a class="active" href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="search">
+          <input id="productSearch" type="search" placeholder="Search products">
+          <button id="productSearchBtn" aria-label="search">🔍</button>
+        </div>
+        <button class="cart-btn" id="openCart">🛒<span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="products">
+    <aside class="filters">
+      <h3>Smart Filters</h3>
+      <label>Category<select id="filterCategory"></select></label>
+      <label>Brand<select id="filterBrand"></select></label>
+      <label>Price Range<input type="range" id="filterPrice" min="0" max="1000000" step="10000"><span id="filterPriceValue"></span></label>
+      <button class="btn btn--ghost" id="resetFilters">Reset</button>
+    </aside>
+    <section class="catalog">
+      <div class="catalog__grid" id="catalogGrid"></div>
+    </section>
+  </main>
+
+  <div id="quickView" class="modal" aria-hidden="true">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close>✕</button>
+      <div id="quickViewContent"></div>
+    </div>
+  </div>
+
+  <div id="cartDrawer" class="drawer" aria-hidden="true">
+    <div class="drawer__header">
+      <h3>Your Cart</h3>
+      <button class="drawer__close" id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="drawer__body"></div>
+    <div class="drawer__footer">
+      <div class="total">Total: <span id="cartTotal">₦0</span></div>
+      <button class="btn btn--primary" id="checkoutPaystack">Pay with Paystack</button>
+      <button class="btn btn--ghost" id="checkoutFlutterwave">Pay with Flutterwave</button>
+    </div>
+  </div>
+
+  <a class="float-whatsapp" href="https://wa.me/2347067797360" target="_blank">💬</a>
+
+  <footer class="footer minimal">
+    <div class="footer__meta">
+      <p>© <span id="year"></span> Emmytech Digital Solutions</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

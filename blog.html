@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog • Emmytech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="blog">
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">Emmytech</a>
+      <nav class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="active" href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="blog">
+    <h1>Tech News & Tips</h1>
+    <div class="blog__layout">
+      <aside class="blog__sidebar">
+        <input id="blogSearch" type="search" placeholder="Search articles">
+        <div id="blogCategories"></div>
+      </aside>
+      <section class="blog__list" id="blogList"></section>
+    </div>
+  </main>
+  <footer class="footer minimal">
+    <div class="footer__meta">
+      <p>© <span id="year"></span> Emmytech Digital Solutions</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

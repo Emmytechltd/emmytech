@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery • Emmytech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="gallery">
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">Emmytech</a>
+      <nav class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="gallery-page">
+    <h1>Gallery</h1>
+    <div class="gallery__grid" id="galleryGrid"></div>
+    <div id="lightbox" class="modal" aria-hidden="true">
+      <div class="modal__dialog modal__dialog--image">
+        <button class="modal__close" data-close>✕</button>
+        <img id="lightboxImg" alt="">
+      </div>
+    </div>
+  </main>
+  <footer class="footer minimal">
+    <div class="footer__meta">
+      <p>© <span id="year"></span> Emmytech Digital Solutions</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product • Emmytech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="product">
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">Emmytech</a>
+      <nav class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="cart-btn" id="openCart">🛒<span id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+  <main class="product">
+    <section class="product__top">
+      <div class="gallery" id="prodGallery"></div>
+      <div class="details">
+        <h1 id="prodTitle"></h1>
+        <div class="price"><span id="prodPrice"></span> <span id="prodDiscount" class="badge"></span></div>
+        <p id="prodDesc"></p>
+        <div class="actions">
+          <button class="btn btn--primary" id="addToCart">Add to Cart</button>
+          <button class="btn btn--ghost" id="buyNow">Buy Now</button>
+        </div>
+      </div>
+    </section>
+    <section class="specs">
+      <h3>Specifications</h3>
+      <table id="specsTable"></table>
+    </section>
+    <section class="related">
+      <h3>Related Products</h3>
+      <div class="catalog__grid" id="relatedGrid"></div>
+    </section>
+  </main>
+
+  <div id="cartDrawer" class="drawer" aria-hidden="true">
+    <div class="drawer__header">
+      <h3>Your Cart</h3>
+      <button class="drawer__close" id="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="drawer__body"></div>
+    <div class="drawer__footer">
+      <div class="total">Total: <span id="cartTotal">₦0</span></div>
+      <button class="btn btn--primary" id="checkoutPaystack">Pay with Paystack</button>
+      <button class="btn btn--ghost" id="checkoutFlutterwave">Pay with Flutterwave</button>
+    </div>
+  </div>
+
+  <footer class="footer minimal">
+    <div class="footer__meta">
+      <p>© <span id="year"></span> Emmytech Digital Solutions</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin • Emmytech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="admin">
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">Emmytech</a>
+      <nav class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="admin">
+    <h1>Admin Dashboard</h1>
+    <div class="admin__grid">
+      <form id="adminForm" class="card">
+        <h3>Add / Update Product</h3>
+        <label>Id<input name="id" placeholder="auto"></label>
+        <label>Name<input name="name" required></label>
+        <label>Brand<input name="brand" required></label>
+        <label>Category<input name="category" required></label>
+        <label>Price<input type="number" name="price" required></label>
+        <label>Discount<input type="number" name="discount" value="0"></label>
+        <label>Image URL<input name="image" required></label>
+        <label>Short Description<textarea name="description" required></textarea></label>
+        <label>Specs JSON<textarea name="specs" placeholder='{"CPU":"..."}'></textarea></label>
+        <button class="btn btn--primary" type="submit">Save</button>
+      </form>
+      <div class="card">
+        <h3>Products</h3>
+        <div id="adminList" class="catalog__grid"></div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer minimal">
+    <div class="footer__meta">
+      <p>© <span id="year"></span> Emmytech Digital Solutions</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

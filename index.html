@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Emmytech Digital Solutions – premium tech gadgets: laptops, phones, CCTV, smart locks, solar, accessories.">
+  <meta name="theme-color" content="#0b0f16">
+  <title>Emmytech Digital Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html">Emmytech</a>
+      <nav class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="search">
+          <input id="globalSearch" type="search" placeholder="Search gadgets">
+          <button id="globalSearchBtn" aria-label="search">🔍</button>
+        </div>
+        <a class="cart-btn" href="products.html#cart">🛒<span id="cartCount">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Premium Tech, Future-Ready</h1>
+        <p>Explore laptops, smartphones, smart security, solar and power solutions tailored for work and life.</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="products.html">Shop Now</a>
+          <a class="btn btn--ghost" href="contact.html">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <img class="hero__image" src="assets/img/hero.svg" alt="Tech gadgets">
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="section__head">
+        <h2>Shop by Category</h2>
+        <a class="link" href="products.html">Browse all</a>
+      </div>
+      <div class="categories__grid">
+        <a class="cat" href="products.html?category=Laptops"><span>💻</span><p>Laptops</p></a>
+        <a class="cat" href="products.html?category=Mobile%20Phones"><span>📱</span><p>Mobile Phones</p></a>
+        <a class="cat" href="products.html?category=CCTV"><span>🎥</span><p>CCTV</p></a>
+        <a class="cat" href="products.html?category=Smart%20Locks"><span>🔐</span><p>Smart Locks</p></a>
+        <a class="cat" href="products.html?category=Solar%20Panels"><span>☀️</span><p>Solar Panels</p></a>
+        <a class="cat" href="products.html?category=Accessories"><span>🔌</span><p>Accessories</p></a>
+        <a class="cat" href="products.html?category=Power%20Stations"><span>⚡</span><p>Power Stations</p></a>
+      </div>
+    </section>
+
+    <section class="featured">
+      <div class="section__head">
+        <h2>Featured</h2>
+        <div class="slider__controls">
+          <button class="slider__btn" data-dir="-1">◀</button>
+          <button class="slider__btn" data-dir="1">▶</button>
+        </div>
+      </div>
+      <div class="slider" id="featuredSlider"></div>
+    </section>
+
+    <section class="deals">
+      <div class="section__head">
+        <h2>Latest Deals</h2>
+      </div>
+      <div class="deals__grid" id="dealsGrid"></div>
+    </section>
+
+    <section class="testimonials">
+      <div class="section__head">
+        <h2>What Customers Say</h2>
+      </div>
+      <div class="slider" id="testimonialsSlider"></div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter__inner">
+        <h3>Join our newsletter</h3>
+        <p>Get exclusive deals and tech tips.</p>
+        <form id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Your email" required>
+          <button class="btn btn--primary" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <h4>Emmytech Digital Solutions</h4>
+        <p>Premium tech, expert solutions.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="links">
+          <li>Ikeja, Lagos</li>
+          <li><a href="tel:+2347067797360">+234 706 779 7360</a></li>
+          <li><a href="mailto:info@emmytech.com">info@emmytech.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <div class="socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="X">x</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+        <form class="footer__subscribe">
+          <input type="email" placeholder="Email">
+          <button class="btn btn--primary" type="button">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <div class="footer__actions">
+        <a class="btn btn--whatsapp" href="https://wa.me/2347067797360" target="_blank">WhatsApp</a>
+        <a class="btn btn--ghost" href="tel:+2347067797360">Call</a>
+      </div>
+      <p>© <span id="year"></span> Emmytech Digital Solutions</p>
+    </div>
+  </footer>
+
+  <a class="float-whatsapp" href="https://wa.me/2347067797360" target="_blank">💬</a>
+
+  <div id="quickView" class="modal" aria-hidden="true">
+    <div class="modal__dialog">
+      <button class="modal__close" data-close>✕</button>
+      <div id="quickViewContent"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

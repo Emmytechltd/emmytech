@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7a00"/>
+      <stop offset="1" stop-color="#0b0f16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)"/>
+  <circle cx="950" cy="200" r="140" fill="#4dd4ff" opacity="0.25"/>
+  <circle cx="300" cy="620" r="110" fill="#ff7a00" opacity="0.25"/>
+  <text x="50%" y="50%" fill="#eaeef5" font-size="56" font-family="Inter,Arial" text-anchor="middle">Emmytech Digital Solutions</text>
+  <text x="50%" y="60%" fill="#aab0ba" font-size="24" font-family="Inter,Arial" text-anchor="middle">Premium Tech, Future-Ready</text>
+</svg>
