@@ -142,6 +142,8 @@
       var exist=state.products.find(x=>x.id===obj.id);if(exist){Object.assign(exist,obj)}else{state.products.push(obj)}lsSet('emmytech_products',state.products);form.reset();render()})
   }
 
+  function setupMobileNav(){var nav=q('.nav');var btn=byId('navToggle');if(btn&&nav){btn.addEventListener('click',function(){nav.classList.toggle('is-open')});qa('.nav__links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('is-open')})})}}
+
   function initHome(){renderFeatured();renderDeals();renderTestimonials();setupSearch()}
   function initProducts(){renderFilters();renderCatalog();setupCartControls();setupCheckout()}
   function initProduct(){renderProduct();setupCartControls();setupCheckout()}
@@ -150,6 +152,6 @@
   function initContact(){var form=byId('contactForm');if(form)form.addEventListener('submit',function(e){e.preventDefault();alert('Message received. We will contact you.')})}
   function initNewsletter(){var form=byId('newsletterForm');if(form)form.addEventListener('submit',function(e){e.preventDefault();var email=byId('newsletterEmail').value.trim();if(email){var list=lsGet('emmytech_news')||[];list.push({email:email,ts:Date.now()});lsSet('emmytech_news',list);byId('newsletterEmail').value='';alert('Subscribed')}})}
 
-  function init(){setYear();initData();updateCartCount();closeModals();var page=document.body.getAttribute('data-page');if(page===pages.home){initHome();initNewsletter()}else if(page===pages.products){initProducts()}else if(page===pages.product){initProduct()}else if(page===pages.gallery){initGallery()}else if(page===pages.blog){initBlog()}else if(page===pages.contact){initContact()}handleAdmin()}
+  function init(){setYear();initData();updateCartCount();closeModals();setupMobileNav();var page=document.body.getAttribute('data-page');if(page===pages.home){initHome();initNewsletter()}else if(page===pages.products){initProducts()}else if(page===pages.product){initProduct()}else if(page===pages.gallery){initGallery()}else if(page===pages.blog){initBlog()}else if(page===pages.contact){initContact()}handleAdmin()}
   document.addEventListener('DOMContentLoaded',init)
 })();
