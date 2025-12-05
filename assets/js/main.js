@@ -13,8 +13,8 @@
   function initData(){
     var saved=lsGet("emmytech_products")
     var base=[
-      {id:"lap-pro-15",name:"Laptop Pro 15",brand:"Emmytech",category:"Laptops",price:950000,discount:10,image:"assets/img/laptop.svg",description:"Powerful 15-inch performance laptop",specs:{CPU:"Core i7",RAM:"16GB",Storage:"512GB SSD",Display:"15.6"}},
-      {id:"phone-x",name:"Phone X 5G",brand:"Emmytech",category:"Mobile Phones",price:350000,discount:5,image:"assets/img/phone.svg",description:"Flagship smartphone with 5G",specs:{Chip:"Octa-core",RAM:"8GB",Storage:"256GB",Camera:"50MP"}},
+      {id:"lap-pro-15",name:"Laptop Pro 15",brand:"Emmytech",category:"Laptops",price:950000,discount:10,image:"assets/img/IMG-20251202-WA0024.svg",description:"Powerful 15-inch performance laptop",specs:{CPU:"Core i7",RAM:"16GB",Storage:"512GB SSD",Display:"15.6"}},
+      {id:"phone-x",name:"Phone X 5G",brand:"Emmytech",category:"Mobile Phones",price:350000,discount:5,image:"assets/img/17pm.svg",description:"Flagship smartphone with 5G",specs:{Chip:"Octa-core",RAM:"8GB",Storage:"256GB",Camera:"50MP"}},
       {id:"cctv-4k",name:"CCTV 4K Dome",brand:"SecureCam",category:"CCTV",price:120000,discount:0,image:"assets/img/cctv.svg",description:"Ultra HD surveillance camera",specs:{Resolution:"4K",Night:"IR",Waterproof:"IP66"}},
       {id:"smart-lock-pro",name:"Smart Door Lock Pro",brand:"SafeHome",category:"Smart Locks",price:180000,discount:12,image:"assets/img/lock.svg",description:"Keyless entry with app control",specs:{Access:"Fingerprint",Battery:"12 months",Connectivity:"Bluetooth/WiFi"}},
       {id:"solar-300w",name:"Solar Panel 300W",brand:"SunGrid",category:"Solar Panels",price:90000,discount:7,image:"assets/img/solar.svg",description:"High efficiency solar panel",specs:{Power:"300W",Efficiency:"21%"}},
@@ -108,8 +108,8 @@
   }
 
   function renderGallery(){var g=byId('galleryGrid');if(!g)return;var imgs=[
-    'assets/img/laptop.svg',
-    'assets/img/phone.svg',
+    'assets/img/IMG-20251202-WA0024.svg',
+    'assets/img/17pm.svg',
     'assets/img/cctv.svg',
     'assets/img/lock.svg',
     'assets/img/solar.svg',
