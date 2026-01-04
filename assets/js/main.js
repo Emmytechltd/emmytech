@@ -12,6 +12,28 @@
   function setYear(){var y=byId("year");if(y)y.textContent=new Date().getFullYear()}
   function initData(){
     var saved=lsGet("emmytech_products")
+    function rp(min,max){return Math.round((Math.random()*(max-min)+min)/1000)*1000}
+    var newImgs=[
+      'assets/img/IMG-20250911-WA0020.jpg',
+      'assets/img/IMG-20250911-WA0021.jpg',
+      'assets/img/IMG-20250911-WA0022.jpg',
+      'assets/img/IMG-20250911-WA0023.jpg',
+      'assets/img/IMG-20251202-WA0023.jpg',
+      'assets/img/IMG-20251202-WA0024.jpg',
+      'assets/img/ipad.jpg',
+      'assets/img/phone.jpg'
+    ]
+    var extras=newImgs.map(function(src,i){return {
+      id:'new-'+i,
+      name:['Stylish Accessory','Compact Accessory','Portable Speaker','Wireless Charger','Tablet Ultra','Laptop Slim','iPad Mini','Phone Z'][i]||('Product '+(i+1)),
+      brand:i%2?"Emmytech":"ThirdParty",
+      category:i<3?"Accessories":(i===5?"Laptops":(i===6?"Tablets":"Mobile Phones")),
+      price:rp(8000,350000),
+      discount:i%4===0?5:0,
+      image:src,
+      description:"New arrival - limited stock",
+      specs:{Feature:"Value"}
+    }})
     var base=[
       {id:"lap-pro-15",name:"Laptop Pro 15",brand:"Emmytech",category:"Laptops",price:950000,discount:10,image:"assets/img/IMG-20251202-WA0024.svg",description:"Powerful 15-inch performance laptop",specs:{CPU:"Core i7",RAM:"16GB",Storage:"512GB SSD",Display:"15.6"}},
       {id:"phone-x",name:"Phone X 5G",brand:"Emmytech",category:"Mobile Phones",price:350000,discount:5,image:"assets/img/17pm.svg",description:"Flagship smartphone with 5G",specs:{Chip:"Octa-core",RAM:"8GB",Storage:"256GB",Camera:"50MP"}},
@@ -21,7 +43,8 @@
       {id:"power-station-1kwh",name:"Power Station 1kWh",brand:"VoltBox",category:"Power Stations",price:420000,discount:15,image:"assets/img/power.svg",description:"Portable power station",specs:{Capacity:"1000Wh",Output:"1000W"}},
       {id:"mouse-pro",name:"Wireless Mouse Pro",brand:"Emmytech",category:"Accessories",price:18000,discount:0,image:"assets/img/mouse.svg",description:"Ergonomic wireless mouse",specs:{DPI:"16000",Battery:"Rechargeable"}}
     ]
-    state.products=saved&&Array.isArray(saved)?saved:base
+    var combined = base.concat(extras)
+    state.products=saved&&Array.isArray(saved)?saved:combined
     state.categories=[...new Set(state.products.map(p=>p.category))]
     state.brands=[...new Set(state.products.map(p=>p.brand))]
     state.deals=state.products.filter(p=>p.discount>0)
@@ -113,7 +136,14 @@
     'assets/img/cctv.svg',
     'assets/img/lock.svg',
     'assets/img/solar.svg',
-    'assets/img/power.svg'
+    'assets/img/power.svg',
+    'assets/img/IMG-20250911-WA0020.jpg',
+    'assets/img/IMG-20250911-WA0021.jpg',
+    'assets/img/IMG-20250911-WA0022.jpg',
+    'assets/img/IMG-20250911-WA0023.jpg',
+    'assets/img/IMG-20251202-WA0023.jpg',
+    'assets/img/ipad.jpg',
+    'assets/img/phone.jpg'
   ];g.innerHTML='';imgs.forEach(function(src){var img=document.createElement('img');img.src=src;img.addEventListener('click',function(){var m=byId('lightbox');var i=byId('lightboxImg');if(m&&i){i.src=src;m.setAttribute('open','true')}});g.appendChild(img)})}
 
   function renderBlog(){var list=byId('blogList');var cats=byId('blogCategories');var search=byId('blogSearch');if(!list)return
