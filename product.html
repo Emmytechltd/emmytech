@@ -12,7 +12,7 @@
 <body data-page="product">
   <header class="nav">
     <div class="nav__inner">
-      <a class="brand" href="index.html">Emmytech</a>
+      <a class="brand" href="index.html"><span class="brand__mark">E</span><span><strong>Emmytech</strong><small>Digital Solutions</small></span></a>
       <nav class="nav__links">
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
@@ -21,7 +21,7 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="nav__actions">
-        <button class="cart-btn" id="openCart">🛒<span id="cartCount">0</span></button>
+        <button class="cart-btn" id="openCart">Cart <span id="cartCount">0</span></button>
       </div>
     </div>
   </header>
@@ -51,11 +51,11 @@
   <div id="cartDrawer" class="drawer" aria-hidden="true">
     <div class="drawer__header">
       <h3>Your Cart</h3>
-      <button class="drawer__close" id="closeCart">✕</button>
+      <button class="drawer__close" id="closeCart" aria-label="Close cart">Close</button>
     </div>
     <div id="cartItems" class="drawer__body"></div>
     <div class="drawer__footer">
-      <div class="total">Total: <span id="cartTotal">₦0</span></div>
+      <div class="total">Total: <span id="cartTotal">NGN 0</span></div>
       <button class="btn btn--primary" id="checkoutPaystack">Pay with Paystack</button>
       <button class="btn btn--ghost" id="checkoutFlutterwave">Pay with Flutterwave</button>
     </div>
@@ -63,7 +63,7 @@
 
   <footer class="footer minimal">
     <div class="footer__meta">
-      <p>© <span id="year"></span> Emmytech Digital Solutions</p>
+      <p>Copyright <span id="year"></span> Emmytech Digital Solutions</p>
     </div>
   </footer>
 

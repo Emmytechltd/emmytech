@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Products • Emmytech</title>
+  <title>Shop | Emmytech Digital Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,11 +12,11 @@
 <body data-page="products">
   <header class="nav">
     <div class="nav__inner">
-      <a class="brand" href="index.html">Emmytech</a>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu">☰</button>
+      <a class="brand" href="index.html"><span class="brand__mark">E</span><span><strong>Emmytech</strong><small>Digital Solutions</small></span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
       <nav class="nav__links">
         <a href="index.html">Home</a>
-        <a class="active" href="products.html">Products</a>
+        <a class="active" href="products.html">Shop</a>
         <a href="gallery.html">Gallery</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
@@ -24,9 +24,9 @@
       <div class="nav__actions">
         <div class="search">
           <input id="productSearch" type="search" placeholder="Search products">
-          <button id="productSearchBtn" aria-label="search">🔍</button>
+          <button id="productSearchBtn" aria-label="Search">Search</button>
         </div>
-        <button class="cart-btn" id="openCart">🛒<span id="cartCount">0</span></button>
+        <button class="cart-btn" id="openCart">Cart <span id="cartCount">0</span></button>
       </div>
     </div>
   </header>
@@ -46,7 +46,7 @@
 
   <div id="quickView" class="modal" aria-hidden="true">
     <div class="modal__dialog">
-      <button class="modal__close" data-close>✕</button>
+      <button class="modal__close" data-close aria-label="Close quick view">Close</button>
       <div id="quickViewContent"></div>
     </div>
   </div>
@@ -54,11 +54,11 @@
   <div id="cartDrawer" class="drawer" aria-hidden="true">
     <div class="drawer__header">
       <h3>Your Cart</h3>
-      <button class="drawer__close" id="closeCart">✕</button>
+      <button class="drawer__close" id="closeCart" aria-label="Close cart">Close</button>
     </div>
     <div id="cartItems" class="drawer__body"></div>
     <div class="drawer__footer">
-      <div class="total">Total: <span id="cartTotal">₦0</span></div>
+      <div class="total">Total: <span id="cartTotal">NGN 0</span></div>
       <button class="btn btn--primary" id="checkoutPaystack">Pay with Paystack</button>
       <button class="btn btn--ghost" id="checkoutFlutterwave">Pay with Flutterwave</button>
     </div>
@@ -68,7 +68,7 @@
 
   <footer class="footer minimal">
     <div class="footer__meta">
-      <p>© <span id="year"></span> Emmytech Digital Solutions</p>
+      <p>Copyright <span id="year"></span> Emmytech Digital Solutions</p>
     </div>
   </footer>
 

@@ -3,100 +3,164 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Emmytech Digital Solutions – premium tech gadgets: laptops, phones, CCTV, smart locks, solar, accessories.">
-  <meta name="theme-color" content="#0b0f16">
-  <title>Emmytech Digital Solutions</title>
+  <meta name="description" content="Emmytech Digital Solutions in Ikeja, Lagos supplies premium laptops, smartphones, CCTV, solar systems, accessories, repairs, and website development.">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>Emmytech Digital Solutions | Premium Tech Gadgets & Digital Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-page="home">
   <header class="nav">
     <div class="nav__inner">
-      <a class="brand" href="index.html">Emmytech</a>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu">☰</button>
-      <nav class="nav__links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
+      <a class="brand" href="index.html" aria-label="Emmytech Digital Solutions home">
+        <span class="brand__mark">E</span>
+        <span><strong>Emmytech</strong><small>Digital Solutions</small></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav class="nav__links" aria-label="Main navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="nav__actions">
-        <div class="search">
-          <input id="globalSearch" type="search" placeholder="Search gadgets">
-          <button id="globalSearchBtn" aria-label="search">🔍</button>
+        <div class="search search--nav">
+          <input id="globalSearch" type="search" placeholder="AI search laptops, CCTV, solar..." autocomplete="off">
+          <button id="globalSearchBtn" aria-label="Search">Search</button>
         </div>
-        <a class="cart-btn" href="products.html#cart">🛒<span id="cartCount">0</span></a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">Mode</button>
+        <a class="cart-btn" href="products.html#cart" aria-label="Open cart">Cart <span id="cartCount">0</span></a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero__content">
-        <h1>Premium Tech, Future-Ready</h1>
-        <p>Explore laptops, smartphones, smart security, solar and power solutions tailored for work and life.</p>
+      <div class="hero__particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero__content reveal">
+        <p class="eyebrow">Ikeja Lagos tech store + digital solutions studio</p>
+        <h1>Premium Tech Gadgets & Digital Solutions</h1>
+        <p class="hero__lead">Shop trusted gadgets, install smarter security, power your home or office, and get expert support from a Lagos team built for modern work.</p>
         <div class="hero__cta">
           <a class="btn btn--primary" href="products.html">Shop Now</a>
-          <a class="btn btn--ghost" href="contact.html">Get in Touch</a>
+          <a class="btn btn--ghost" href="contact.html">Contact Us</a>
+        </div>
+        <div class="trust-strip" aria-label="Business highlights">
+          <span>Verified products</span>
+          <span>Same-city support</span>
+          <span>Secure checkout</span>
         </div>
       </div>
-      <div class="hero__visual">
-        <div class="orb orb--1"></div>
-        <div class="orb orb--2"></div>
-        <img class="hero__image" src="assets/img/hero.svg" alt="Tech gadgets">
+      <div class="hero__visual reveal">
+        <div class="device-stage">
+          <img class="hero__image hero__image--main" src="assets/img/IMG-20251202-WA0024.jpg" alt="Premium laptop available from Emmytech" loading="eager">
+          <div class="floating-card floating-card--top">
+            <span>Trending</span>
+            <strong>iPhone 17 Pro Max</strong>
+            <small>Flagship mobile gadgets</small>
+          </div>
+          <div class="floating-card floating-card--bottom">
+            <span>Power</span>
+            <strong>Solar + stations</strong>
+            <small>Backup energy installs</small>
+          </div>
+          <img class="hero__image hero__image--phone" src="assets/img/17pm.jpg" alt="Featured smartphone" loading="lazy">
+        </div>
       </div>
     </section>
 
-    <section class="categories">
-      <div class="section__head">
-        <h2>Shop by Category</h2>
-        <a class="link" href="products.html">Browse all</a>
+    <section class="stats section-pad" id="about">
+      <div class="stat-card reveal"><strong data-count="500">0</strong><span>Happy customers</span></div>
+      <div class="stat-card reveal"><strong data-count="7">0</strong><span>Core tech services</span></div>
+      <div class="stat-card reveal"><strong data-count="24">0</strong><span>Hour support response</span></div>
+      <div class="stat-card reveal"><strong data-count="100">0</strong><span>Original product focus</span></div>
+    </section>
+
+    <section class="categories section-pad" id="categories">
+      <div class="section__head reveal">
+        <div>
+          <p class="eyebrow">Shop smarter</p>
+          <h2>Categories Built For Work, Home, And Growth</h2>
+        </div>
+        <a class="link" href="products.html">Browse all products</a>
       </div>
       <div class="categories__grid">
-        <a class="cat" href="products.html?category=Laptops"><img src="assets/img/IMG-20251202-WA0024.svg" alt="Laptops"><p>Laptops</p></a>
-        <a class="cat" href="products.html?category=Mobile%20Phones"><img src="assets/img/17pm.svg" alt="Mobile Phones"><p>Mobile Phones</p></a>
-        <a class="cat" href="products.html?category=CCTV"><img src="assets/img/cctv.svg" alt="CCTV"><p>CCTV</p></a>
-        <a class="cat" href="products.html?category=Smart%20Locks"><img src="assets/img/lock.svg" alt="Smart Locks"><p>Smart Locks</p></a>
-        <a class="cat" href="products.html?category=Solar%20Panels"><img src="assets/img/solar.svg" alt="Solar Panels"><p>Solar Panels</p></a>
-        <a class="cat" href="products.html?category=Accessories"><img src="assets/img/mouse.svg" alt="Accessories"><p>Accessories</p></a>
-        <a class="cat" href="products.html?category=Power%20Stations"><img src="assets/img/power.svg" alt="Power Stations"><p>Power Stations</p></a>
+        <a class="cat reveal" href="products.html?category=Laptops"><img src="assets/img/IMG-20251202-WA0024.svg" alt="Laptop category" loading="lazy"><span>Laptops</span><small>Performance machines</small></a>
+        <a class="cat reveal" href="products.html?category=Mobile%20Phones"><img src="assets/img/17pm.svg" alt="Smartphone category" loading="lazy"><span>Smartphones</span><small>Premium mobile gadgets</small></a>
+        <a class="cat reveal" href="products.html?category=CCTV"><img src="assets/img/cctv.svg" alt="CCTV category" loading="lazy"><span>CCTV</span><small>Security systems</small></a>
+        <a class="cat reveal" href="products.html?category=Solar%20Panels"><img src="assets/img/solar.svg" alt="Solar category" loading="lazy"><span>Solar Systems</span><small>Power solutions</small></a>
+        <a class="cat reveal" href="products.html?category=Accessories"><img src="assets/img/mouse.svg" alt="Accessories category" loading="lazy"><span>Accessories</span><small>Daily tech essentials</small></a>
+        <a class="cat reveal" href="products.html?category=Repairs"><img src="assets/img/ipad.svg" alt="Repairs category" loading="lazy"><span>Repairs</span><small>Hardware diagnostics</small></a>
       </div>
     </section>
 
-    <section class="featured">
-      <div class="section__head">
-        <h2>Featured</h2>
+    <section class="featured section-pad">
+      <div class="section__head reveal">
+        <div>
+          <p class="eyebrow">Curated shelf</p>
+          <h2>Featured Products</h2>
+        </div>
         <div class="slider__controls">
-          <button class="slider__btn" data-dir="-1">◀</button>
-          <button class="slider__btn" data-dir="1">▶</button>
+          <button class="slider__btn" data-dir="-1" aria-label="Previous featured products">Prev</button>
+          <button class="slider__btn" data-dir="1" aria-label="Next featured products">Next</button>
         </div>
       </div>
+      <div class="skeleton-row" id="featuredSkeleton"><span></span><span></span><span></span></div>
       <div class="slider" id="featuredSlider"></div>
     </section>
 
-    <section class="deals">
-      <div class="section__head">
-        <h2>Latest Deals</h2>
+    <section class="services section-pad" id="services">
+      <div class="section__head reveal">
+        <div>
+          <p class="eyebrow">Beyond the cart</p>
+          <h2>Digital Services With Premium Execution</h2>
+        </div>
+      </div>
+      <div class="services__grid">
+        <article class="service-card reveal"><span>01</span><h3>CCTV Installation</h3><p>Clean camera setup for homes, stores, offices, and warehouses with practical coverage planning.</p></article>
+        <article class="service-card reveal"><span>02</span><h3>Solar & Power Stations</h3><p>Reliable backup power recommendations, supply, and installation support for Lagos living.</p></article>
+        <article class="service-card reveal"><span>03</span><h3>Hardware Repairs</h3><p>Laptop, phone, and gadget diagnostics with careful repair guidance and replacement options.</p></article>
+        <article class="service-card reveal"><span>04</span><h3>Website Development</h3><p>Modern business websites, e-commerce pages, and digital presence support for growing brands.</p></article>
+      </div>
+    </section>
+
+    <section class="trending section-pad">
+      <div class="section__head reveal">
+        <div>
+          <p class="eyebrow">Hot in store</p>
+          <h2>Trending Products</h2>
+        </div>
       </div>
       <div class="deals__grid" id="dealsGrid"></div>
     </section>
 
-    <section class="testimonials">
-      <div class="section__head">
-        <h2>What Customers Say</h2>
+    <section class="testimonials section-pad">
+      <div class="section__head reveal">
+        <div>
+          <p class="eyebrow">Customer trust</p>
+          <h2>What Customers Say</h2>
+        </div>
       </div>
-      <div class="slider" id="testimonialsSlider"></div>
+      <div class="testimonial-shell reveal">
+        <div class="slider" id="testimonialsSlider"></div>
+      </div>
     </section>
 
-    <section class="newsletter">
-      <div class="newsletter__inner">
-        <h3>Join our newsletter</h3>
-        <p>Get exclusive deals and tech tips.</p>
+    <section class="newsletter section-pad">
+      <div class="newsletter__inner reveal">
+        <div>
+          <p class="eyebrow">Deal radar</p>
+          <h2>Get Premium Tech Drops Before Everyone Else</h2>
+          <p>Receive new arrivals, repair tips, solar deals, and limited Lagos offers from Emmytech.</p>
+        </div>
         <form id="newsletterForm">
-          <input type="email" id="newsletterEmail" placeholder="Your email" required>
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
           <button class="btn btn--primary" type="submit">Subscribe</button>
         </form>
       </div>
@@ -106,16 +170,16 @@
   <footer class="footer">
     <div class="footer__grid">
       <div>
-        <h4>Emmytech Digital Solutions</h4>
-        <p>Premium tech, expert solutions.</p>
+        <a class="brand brand--footer" href="index.html"><span class="brand__mark">E</span><span><strong>Emmytech</strong><small>Digital Solutions</small></span></a>
+        <p>Premium gadgets, CCTV, solar, accessories, repairs, and websites from Ikeja, Lagos.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
         <ul class="links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -124,37 +188,38 @@
         <ul class="links">
           <li>Ikeja, Lagos</li>
           <li><a href="tel:+2347067797360">+234 706 779 7360</a></li>
-          <li><a href="mailto:info@emmytech.com">emmybasil@gmail.com</a></li>
+          <li><a href="mailto:emmybasil@gmail.com">emmybasil@gmail.com</a></li>
         </ul>
       </div>
       <div>
         <h4>Connect</h4>
         <div class="socials">
-          <a href="https://web.facebook.com/emmabasil" aria-label="Facebook">f</a>
-          <a href="https://www.linkedin.com/in/onu-emmanuel-73a83613b/" aria-label="Linkedln ">Linkedln</a>
-          <a href="https://www.instagram.com/emmx_dude/" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i>Ig</a>
-          <a href="https://www.youtube.com/@GemsDiary-t7j" aria-label="YouTube">YouTube</a>
+          <a href="https://web.facebook.com/emmabasil" aria-label="Facebook">FB</a>
+          <a href="https://www.instagram.com/emmx_dude/" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/onu-emmanuel-73a83613b/" aria-label="LinkedIn">IN</a>
+          <a href="https://www.youtube.com/@GemsDiary-t7j" aria-label="YouTube">YT</a>
         </div>
         <form class="footer__subscribe">
-          <input type="email" placeholder="Email">
+          <input type="email" placeholder="Email address">
           <button class="btn btn--primary" type="button">Join</button>
         </form>
       </div>
     </div>
     <div class="footer__meta">
       <div class="footer__actions">
-        <a class="btn btn--whatsapp" href="https://wa.me/2347067797360" target="_blank">WhatsApp</a>
+        <a class="btn btn--whatsapp" href="https://wa.me/2347067797360" target="_blank" rel="noreferrer">WhatsApp</a>
         <a class="btn btn--ghost" href="tel:+2347067797360">Call</a>
       </div>
-      <p>© <span id="year"></span> Emmytech Digital Solutions</p>
+      <p>Copyright <span id="year"></span> Emmytech Digital Solutions. All rights reserved.</p>
     </div>
   </footer>
 
-  <a class="float-whatsapp" href="https://wa.me/2347067797360" target="_blank">💬</a>
+  <a class="float-whatsapp" href="https://wa.me/2347067797360" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">WA</a>
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top">Top</button>
 
   <div id="quickView" class="modal" aria-hidden="true">
     <div class="modal__dialog">
-      <button class="modal__close" data-close>✕</button>
+      <button class="modal__close" data-close aria-label="Close quick view">Close</button>
       <div id="quickViewContent"></div>
     </div>
   </div>
