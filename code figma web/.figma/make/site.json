@@ -1,0 +1,10 @@
+{
+  "description": "A premium Nigerian e-commerce platform offering technology products, expert repair services, CCTV and solar solutions with seamless shopping and support.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
