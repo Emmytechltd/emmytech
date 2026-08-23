@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext";
@@ -19,6 +19,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Checkout from "./pages/Checkout";
 import NotFound from "./pages/NotFound";
+import Policy from "./pages/Policy";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -65,6 +66,10 @@ function AppLayout() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/privacy" element={<Policy />} />
+        <Route path="/terms" element={<Policy />} />
+        <Route path="/shipping" element={<Policy />} />
+        <Route path="/refund" element={<Policy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 
@@ -80,7 +85,7 @@ function AppLayout() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ThemeProvider>
         <CartProvider>
           <WishlistProvider>
@@ -90,6 +95,6 @@ export default function App() {
           </WishlistProvider>
         </CartProvider>
       </ThemeProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

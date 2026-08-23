@@ -51,7 +51,7 @@ export default function Navbar({ onSearchOpen, onCartOpen }: NavbarProps) {
   useEffect(() => {
     setMobileOpen(false);
     setShopDropdown(false);
-  }, [location]);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -92,12 +92,27 @@ export default function Navbar({ onSearchOpen, onCartOpen }: NavbarProps) {
               {navLinks.map((link) =>
                 link.label === "Shop" ? (
                   <div key={link.label} className="relative" ref={dropdownRef}>
-                    <button
-                      onClick={() => setShopDropdown((v) => !v)}
-                      className="px-4 py-2 rounded-xl text-sm font-medium text-[var(--fg2)] hover:text-[var(--fg)] hover:bg-[var(--bg3)] transition-all"
-                    >
-                      Shop ▾
-                    </button>
+                    <div className="flex items-center">
+                      <NavLink
+                        to={link.to}
+                        className={({ isActive }) =>
+                          `px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+                            isActive
+                              ? "text-[var(--blue)] bg-[var(--blue)]/10"
+                              : "text-[var(--fg2)] hover:text-[var(--fg)] hover:bg-[var(--bg3)]"
+                          }`
+                        }
+                      >
+                        Shop
+                      </NavLink>
+                      <button
+                        onClick={() => setShopDropdown((v) => !v)}
+                        aria-label="Open shop categories"
+                        className="px-1.5 py-2 rounded-xl text-sm font-medium text-[var(--fg2)] hover:text-[var(--fg)] hover:bg-[var(--bg3)] transition-all"
+                      >
+                        ▾
+                      </button>
+                    </div>
                     <AnimatePresence>
                       {shopDropdown && (
                         <motion.div
