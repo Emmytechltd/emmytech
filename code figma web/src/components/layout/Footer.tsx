@@ -30,10 +30,10 @@ const supportLinks = [
 ];
 
 const socials = [
-  { label: "Facebook", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "YouTube", href: "#" },
+  { label: "TikTok", href: "https://www.tiktok.com/@theroboticai?_r=1&_t=ZS-997i1QmVSJ2" },
+  { label: "Facebook", href: "https://www.facebook.com/share/1DHiVWhszG/" },
+  { label: "X", href: "https://x.com/emmxdon" },
+  { label: "Instagram", href: "https://www.instagram.com/emmx_dude?igsi=MXMweG1vdHNuOWc0Ng==" },
   { label: "WhatsApp", href: whatsappUrl() },
 ];
 
