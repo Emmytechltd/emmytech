@@ -11,6 +11,7 @@ import CartDrawer from "./components/layout/CartDrawer";
 import SearchModal from "./components/layout/SearchModal";
 import ToastContainer from "./components/ui/Toast";
 import WhatsAppButton from "./components/ui/WhatsAppButton";
+import ScrollToTopButton from "./components/ui/ScrollToTopButton";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import ProductDetail from "./pages/ProductDetail";
@@ -79,6 +80,7 @@ function AppLayout() {
       <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
       <ToastContainer />
       <WhatsAppButton />
+      <ScrollToTopButton />
     </>
   );
 }
