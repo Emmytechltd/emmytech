@@ -45,7 +45,9 @@ function TimeUnit({ value, label }: { value: number; label: string }) {
 export default function Deals() {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
-  const dealEnd = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000 + 7 * 60 * 60 * 1000);
+  const [dealEnd] = useState(
+    () => new Date(Date.now() + 3 * 24 * 60 * 60 * 1000 + 7 * 60 * 60 * 1000)
+  );
   const { d, h, m, s } = useCountdown(dealEnd);
   const dealProducts = getDealProducts();
   const { addToCart } = useCart();
