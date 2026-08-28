@@ -231,7 +231,7 @@ export default function Navbar({ onSearchOpen, onCartOpen }: NavbarProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed inset-0 z-40 lg:hidden"
+            className="fixed inset-0 z-[60] lg:hidden"
           >
             <div
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
@@ -253,6 +253,7 @@ export default function Navbar({ onSearchOpen, onCartOpen }: NavbarProps) {
                   <NavLink
                     key={link.label}
                     to={link.to}
+                    onClick={() => setMobileOpen(false)}
                     className={({ isActive }) =>
                       `px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                         isActive
@@ -274,6 +275,7 @@ export default function Navbar({ onSearchOpen, onCartOpen }: NavbarProps) {
                     <Link
                       key={cat.label}
                       to={cat.to}
+                      onClick={() => setMobileOpen(false)}
                       className="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-[var(--bg3)] transition-colors"
                     >
                       <Icon size={15} className="text-[var(--blue)]" />
