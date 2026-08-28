@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 import { CartProvider } from "./context/CartContext";
@@ -85,7 +85,7 @@ function AppLayout() {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ThemeProvider>
         <CartProvider>
           <WishlistProvider>
@@ -95,6 +95,6 @@ export default function App() {
           </WishlistProvider>
         </CartProvider>
       </ThemeProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
